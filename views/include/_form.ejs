@@ -1,0 +1,39 @@
+           <!--Form-->
+           <form action="/" method="POST" id="update-produ">
+            <div class="new_produ">
+             <div class="form-group">
+                <label for="nome" class="text-light">Nome</label>
+                <input type="hidden" name="id" value="">
+                <input type="text" name="nome" value="" placeholder="Café">
+             </div>
+            <div class="form-group">
+                <label for="fabricante" class="text-light">Fabricante</label>
+            <select
+              id="fabric"
+              name="fabric"
+              data-name="fabric"
+              required=""
+              class="w-select"
+              onchange="popular()">
+              <option value="nestle">nestle</option>
+              <option value="coca">coca cola</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="categoria" class="text-light">Categoria</label>
+                <select data-name="categ" name="categ" id="categ" class="w-select"></select>
+            </div>
+            <div class="form-group">
+                <label for="quantidade" class="text-light">Quantidade</label>
+                <input type="text" name="quant" value="" placeholder="10">
+            </div>
+            <div class="form-group">
+                <label for="valor" class="text-light">Valor</label>
+                <input type="text" name="valor" value="" placeholder="50">
+             </div>
+
+             <div class="form-group">
+                <button type="submit" class="btn text-dark update">Salvar</button>
+             </div>
+            </div>
+           </form>

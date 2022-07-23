@@ -1,0 +1,66 @@
+<!--include header-->
+    <%-include('include/_header') %>
+<!--/include header-->
+
+    <!--Corpo do Site-->
+    <main id="site-main">
+        <div class="container">
+           <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/"><i class="fas fa-angle-double-left">Voltar</i></a>
+            </div>
+            </a>
+           </div>
+           <div class="form-title text-center">
+            <h2 class="text-dark">Editar Produto</h2>
+            <span class="text-light">Edite produtos no formulario abaixo</span>
+           </div>
+
+     <!--Form-->
+           <form action="/" method="POST" id="new-produ">
+            <div class="new_produ">
+             <div class="form-group">
+                <label for="nome" class="text-light">Nome</label>
+                <input type="hidden" name="id" value="">
+                <input type="text" name="nome" value="" placeholder="Café">
+             </div>
+            <div class="form-group">
+                <label for="fabricante" class="text-light">Fabricante</label>
+            <select
+              id="fabric"
+              name="fabric"
+              data-name="fabric"
+              required=""
+              class="w-select"
+              onchange="popular()">
+              <option value="nestle">nestle</option>
+              <option value="coca">coca cola</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="categoria" class="text-light">Categoria</label>
+                <select data-name="categ" name="categ" id="categ" class="w-select"></select>
+            </div>
+            <div class="form-group">
+                <label for="quantidade" class="text-light">Quantidade</label>
+                <input type="text" name="quant" value="" placeholder="10">
+            </div>
+            <div class="form-group">
+                <label for="valor" class="text-light">Valor</label>
+                <input type="text" name="valor" value="" placeholder="50">
+             </div>
+
+             <div class="form-group">
+                <button type="submit" class="btn text-dark update">Salvar</button>
+             </div>
+            </div>
+           </form>
+
+        </div>
+    </main>
+
+    <!--/Corpo do Site-->
+
+<!--include footer-->
+    <%-include('include/_footer') %>
+<!--/include footer-->

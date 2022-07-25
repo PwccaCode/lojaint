@@ -152,13 +152,13 @@ td{
     margin: auto;
 }
 
-#update-produ .form-group,
-#new-produ .form-group{
+#updateprod .form-group,
+#novoprodu .form-group{
     margin: .4em 0;
 }
 
-#update-produ .form-group input[type="text"],
-#new-produ .form-group input[type="text"]{
+#updateprod .form-group input[type="text"],
+#novoprodu .form-group input[type="text"]{
     width: 100%;
     padding: .6em 1em;
     margin: .5em 0;
@@ -168,8 +168,8 @@ td{
     border-radius: .2em;
 }
 
-#update-produ .form-group .btn,
-#new-produ .form-group .btn{
+#updateprod .form-group .btn,
+#novoprodu .form-group .btn{
     width: 100%;
     padding: .9em 1em;
     background-color: #16db93;
@@ -181,8 +181,8 @@ td{
     margin: .5em 0;
 }
 
-#update-produ .form-group .btn:hover,
-#new-produ .form-group .btn:hover{
+#updateprod .form-group .btn:hover,
+#novoprodu .form-group .btn:hover{
     background-color: var(--dark);
     color: var(--border);
 }

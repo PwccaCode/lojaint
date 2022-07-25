@@ -7,14 +7,40 @@
     <title>Loja int Crud</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
+    <script>
+            function popular()
+            {
+                var a=document.getElementById("fabric").value;
+                if(a==="nestle")
+                {
+                    var arr=["nestle1","nestle2"];
+                }
+                else if(a==="coca")
+                {
+                    var arr=["coca1","coca2"];
+                }
+
+                var string="";
+
+                for(i=0;i<arr.length;i++)
+                {
+                    string=string+"<option value="+arr[i]+">"+arr[i]+"</option>";
+                }
+                document.getElementById("categ").innerHTML=string;
+            }
+        </script>
 </head>
 <body>
 
     <!--Header-->
+    <header id="header">
+    <nav>
     <div class="container">
         <div class="text-center">
             <a href="/" class="nav-brand text-dark"> Central do Usuario</a>
         </div>
     </div>
+    </nav>
+    </header>
 
     <!--/Header-->

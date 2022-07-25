@@ -1,15 +1,18 @@
+                <% for(var i = 0; i < prods.length; i++) { %>
                    <tr>
-                        <td>1</td>
-                        <td>Nestle</td>
-                        <td>Suco</td>
-                        <td>13</td>
-                        <td>22,50</td>
+                        <td><%= i + 1 %></td>
+                        <td><%= prods[i].nome %></td>
+                        <td><%= prods[i].fabric %></td>
+                        <td><%= prods[i].categ %></td>
+                        <td><%= prods[i].quant %></td>
+                        <td><%= prods[i].val %></td>
                         <td>
-                            <a href="updateprod" class="btn border-shadow update">
+                            <a href="updateprod?id=<%= prods[i]._id %>" class="btn border-shadow update">
                             <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
                             </a>
-                            <a class="btn border-shadow delete">
+                            <a class="btn border-shadow delete" data-id=<%= prods[i]._id %>>
                             <span class="text-gradient"><i class="fas fa-times"></i></span>
                             </a>
                         </td>
                     </tr>
+<% } %>

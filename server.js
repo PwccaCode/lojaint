@@ -6,8 +6,8 @@ const morgan = require('morgan');
 const bodyparser = require('body-parser');
 const res = require('express/lib/response');
 const ejs = require('ejs');
-const { request } = require('http');
-const path = require('path');
+var path = require('path');
+const connectDB = require('./server/database/connection')
 
 
 
@@ -16,6 +16,9 @@ const PORT = process.env.PORT || 8080
 
 //log request
 app.use(morgan('tiny'));
+
+//mongo connection
+connectDB();
 
 //parse na request
 app.use(bodyparser.urlencoded({ extended: true}))
@@ -79,19 +82,10 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 //     res.redirect("/");
 // })
 
+//carregar routes
+app.use('/', require("./server/routes/router"));
 
-app.get('/', (req, res) => {
-    res.render('index');
-})
-
-app.get('/novoprod', (req, res) => {
-    res.render('novoprod');
-})
-
-app.get('/updateprod', (req, res) => {
-    res.render('updateprod');
-})
 
 app.listen(PORT, function() {
-     console.log("server na")
- })
+     console.log('server ta rodando em https://localhost:${PORTA}')
+ });
